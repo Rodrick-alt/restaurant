@@ -4,7 +4,7 @@ import './Styles/Index.css';
 import App from './App';
 import Reservation from './Pages/Reservation';
 import NoPage from './Pages/NoPage';
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, HashRouter } from "react-router-dom";
 
 function Index() {
 
@@ -19,17 +19,17 @@ function Index() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <Routes>
         <Route>
           <Route index element={<App />} />
-          <Route path="home" element={<App />} />
+          <Route path="/" element={<App />} />
           <Route path="reservation" element={<Reservation />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
@@ -37,5 +37,5 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Index />
-  </React.StrictMode>
+  </React.StrictMode >
 );

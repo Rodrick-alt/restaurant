@@ -8,7 +8,7 @@ function Reservation() {
   return (
     <div id='page-wrapper'>
       <header className='Hero Hero2'>
-        <Link to='/home'>
+        <Link to='/'>
           <img src={require('../Images/logo.svg').default}
             alt='logo' width={'103px'} height={'40px'} />
         </Link>
@@ -80,7 +80,7 @@ function Reservation() {
       </main>
 
       <footer>
-        <Link to='/home'>
+        <Link to='/'>
           <img src={require('../Images/logo.svg').default}
             alt='logo' width={'103px'} height={'40px'} loading='lazy' />
         </Link>

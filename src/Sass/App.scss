@@ -36,13 +36,12 @@ main,
 
 /* No hover effects on touch ***********************************/
 @media (hover: hover) and (pointer: fine) {
-  button:hover{
-    a{
+  a:hover{
+    button{
       color: #111111;
+      background: white;
       transition: .2s ease-out;
     }
-    background: white;
-    transition: .2s ease-out;
   }
   .Events{
     button:hover{
@@ -50,10 +49,10 @@ main,
     }
   }
   .CTA{
-    button:hover{
+    a:hover{
+      button{
       background: rgba(18, 18, 18, 50%);
-      a{
-        color: white;
+      color: white;
       }
     }
   }

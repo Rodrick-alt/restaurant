@@ -11,11 +11,11 @@ function App() {
           <h1>Exquisite dining since 1989</h1>
           <p>Experience our seasonal menu in beautiful country surroundings.
             Eat the freshest produce from the comfort of our farmhouse.</p>
-          <button>
-            <Link to='/reservation'>
+          <Link to='/reservation'>
+            <button>
               BOOK A TABLE
-            </Link>
-          </button>
+            </button>
+          </Link>
         </div>
       </header>
 
@@ -118,11 +118,11 @@ function App() {
             <p>We love catering for entire families. So please bring everyone
               along for a special meal with your loved ones.
               We’ll provide a memorable experience for all.</p>
-            <button>
-              <Link to='/reservation'>
+            <Link to='/reservation'>
+              <button>
                 BOOK A TABLE
-              </Link>
-            </button>
+              </button>
+            </Link>
             <pre>
               <span>FAMILY GATHERING</span>
               <br />
@@ -135,11 +135,11 @@ function App() {
 
         <section className='CTA'>
           <h2>Ready to make a reservation?</h2>
-          <button>
-            <Link to='/reservation'>
+          <Link to='/reservation'>
+            <button>
               BOOK A TABLE
-            </Link>
-          </button>
+            </button>
+          </Link>
         </section>
       </main>
 
