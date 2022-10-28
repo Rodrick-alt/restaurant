@@ -1,17 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './Styles/Index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Reservation from './Pages/Reservation';
+import NoPage from './Pages/NoPage';
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+
+function Index() {
+
+  // Scroll to top on route change
+  const ScrollToTop = (props) => {
+    const { pathname } = useLocation();
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+  }
+
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route>
+          <Route index element={<App />} />
+          <Route path="home" element={<App />} />
+          <Route path="reservation" element={<Reservation />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Index />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

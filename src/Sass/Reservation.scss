@@ -1,0 +1,330 @@
+/* No hover effects on touch ***********************************/
+@media (hover: hover) and (pointer: fine) {
+  form{
+    input:focus, select:focus{
+      border-radius: 5px;
+      border: 2px solid #111111;
+    }
+
+      button:hover{
+        color: #111111;
+        border: 1px solid #111111;
+      }
+  }
+}
+
+.Hero2{
+  background-color:#111111;
+  background-image: url('../Images/hero2-bg-desktop.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.Hero2{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 11rem;
+  height: 100%;
+  padding: 4rem 5rem 8rem 5rem;
+  margin-bottom: 0;
+  .hero-content2{
+    width: 100%;
+    max-width: 450px;
+    h1{
+      font-size: 65px;
+      font-weight: 400;
+      letter-spacing: .35px;
+    }
+    p{
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 25px;
+      color: white;
+    }
+  }
+}
+
+
+.main2{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding:0 5rem;
+  height: 25rem;
+  background: white;
+}
+
+
+form{
+  position: absolute;
+  top: 15rem;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  z-index: 2;
+}
+.form-image{
+  position: relative;
+  z-index: 1;
+  top: -5rem;
+  left: -30rem;
+}
+form{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  width: 35rem;
+  height: auto;
+  padding: 4rem 3rem;
+  background: white;
+  box-shadow: 0 7.5rem 10rem -5rem rgb(56 66 85 / 50%);
+}
+form{
+  .form-name,.form-email,
+  .input-container,button{
+    width: 100%;
+  }
+  .form-name,.form-email,input, select{
+    font-size: 1.2rem;
+    height: 3rem;
+    padding: 2rem 1.5rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #111111;
+  }
+  .input-container, .input-container div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    font-size: 1.2rem;
+    div{
+      gap: 1rem;
+      input, select{
+        color: #111111;
+        width: 5rem;
+        height: 2rem;
+        padding: 1rem .5rem;
+      }
+      select{
+        padding: initial;
+      }
+    }
+  }
+}
+.form-people{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  width: 100%;
+  border-bottom: 1px solid #111111;
+  p{
+    font-size: 25px;
+    width: 100%;
+    max-width: 150px;
+    font-weight: 600;
+    color: #111111;
+  }
+  .button{
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    color: #111111;
+    width: 100px;
+    height: 50px;
+    padding: .5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border: 1px solid white;
+    background: transparent;
+  }
+}
+
+
+
+
+/* MEDIA QUERIES ****************************************************** */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Hero2{
+    background-image: url('../Images/hero2-bg-mobile.jpg');
+    background-size: cover;
+    background-attachment: local;
+  }
+  .Hero2{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5rem;
+    padding: 5rem 2rem;
+    .hero-content2{
+      width: 100%;
+      max-width: 450px;
+      h1{
+        font-size: 35px;
+        font-weight: 400;
+        letter-spacing: .35px;
+      }
+      p{
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 25px;
+        color: white;
+      }
+    }
+  }
+
+  .main2{
+    justify-content: flex-start;
+    align-items: center;
+    padding:0 0 5rem 0;
+    width: 100%;
+    height: auto;
+  }
+
+  form{
+    position: static;
+  }
+  .form-image{
+    display: none;
+  }
+  form{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+    padding: 4rem 2rem;
+  }
+  form{
+    .input-container, 
+    .input-container div{
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      font-size: 1.2rem;
+      div{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+  }
+
+  footer{
+    margin: 0 auto;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    max-width: 350px;
+    width: 100%;
+    padding: 4rem 2rem;
+  }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 912px) {
+  .Hero2{
+    background-image: url('../Images/hero2-bg-tablet.jpg');
+    background-size: cover;
+    background-attachment: local;
+  }
+  .Hero2{
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    gap: 10rem;
+    width: 100%;
+    padding: 5rem 2rem 15rem 2rem;
+    .hero-content2{
+      justify-self: center;
+      align-self: center;
+      width: 100%;
+      max-width: 460px;
+      h1{
+        font-weight: 400;
+        letter-spacing: .35px;
+      }
+      p{
+        max-width: 500px;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 25px;
+        color: white;
+      }
+    }
+  }
+
+  .main2{
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding:0 5rem;
+    height: 37rem;
+  }
+
+  form{
+    position: relative;
+    top: -11rem;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    z-index: 2;
+  }
+  .form-image{
+    display: none;
+  }
+  form{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 35rem;
+    padding: 4rem 2rem;
+  }
+  form{
+    .input-container, 
+    .input-container div{
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      font-size: 1.2rem;
+      div{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+  }
+
+  footer{
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 5rem 5rem;
+  }
+
+}
