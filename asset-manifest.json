@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/restaurant/static/css/main.d2aa6bea.css",
+    "main.js": "/restaurant/static/js/main.2929dcef.js",
+    "static/media/hero-bg-desktop@2x.jpg": "/restaurant/static/media/hero-bg-desktop@2x.eb3018c2e6e91c6ac813.jpg",
+    "static/media/hero-bg-tablet@2x.jpg": "/restaurant/static/media/hero-bg-tablet@2x.a41d079d0ca6c324b551.jpg",
+    "static/media/hero2-bg-desktop.jpg": "/restaurant/static/media/hero2-bg-desktop.380ae5ab864278655745.jpg",
+    "static/media/hero-bg-mobile@2x.jpg": "/restaurant/static/media/hero-bg-mobile@2x.bc140232d5fa95cda597.jpg",
+    "static/media/ready-bg-tablet@2x.jpg": "/restaurant/static/media/ready-bg-tablet@2x.f8ae9636c0ea7dedd830.jpg",
+    "static/media/enjoyable-place-desktop@2x.jpg": "/restaurant/static/media/enjoyable-place-desktop@2x.7e18002775550542b4df.jpg",
+    "static/media/hero2-bg-tablet.jpg": "/restaurant/static/media/hero2-bg-tablet.4b770b032810b26a676e.jpg",
+    "static/media/family-gathering-desktop.jpg": "/restaurant/static/media/family-gathering-desktop.c06bb066e7fcaea3cc47.jpg",
+    "static/media/ready-bg-mobile@2x.jpg": "/restaurant/static/media/ready-bg-mobile@2x.a6d713d855af5f5bb8e2.jpg",
+    "static/media/ready-bg-desktop.jpg": "/restaurant/static/media/ready-bg-desktop.38d9c802c7c571910e8b.jpg",
+    "static/media/locally-sourced-desktop@2x.jpg": "/restaurant/static/media/locally-sourced-desktop@2x.1da7155a51253754bccc.jpg",
+    "static/media/hero2-bg-mobile.jpg": "/restaurant/static/media/hero2-bg-mobile.c55e2ef76e127226a4b7.jpg",
+    "static/media/logo.svg": "/restaurant/static/media/logo.f6ae2c4c211a90898da523543bbc0998.svg",
+    "index.html": "/restaurant/index.html",
+    "static/media/pattern-lines.svg": "/restaurant/static/media/pattern-lines.df381b885c20dd4456461d68476a9585.svg",
+    "static/media/pattern-divide.svg": "/restaurant/static/media/pattern-divide.bf6d0c5c9c8bc89b8c415e6b51851fe2.svg",
+    "static/media/pattern-curve-top-right.svg": "/restaurant/static/media/pattern-curve-top-right.df37c69de72cbd2d4ef2.svg",
+    "static/media/pattern-curve-top-left.svg": "/restaurant/static/media/pattern-curve-top-left.77f903fbea346f903136.svg",
+    "main.d2aa6bea.css.map": "/restaurant/static/css/main.d2aa6bea.css.map",
+    "main.2929dcef.js.map": "/restaurant/static/js/main.2929dcef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2aa6bea.css",
+    "static/js/main.2929dcef.js"
+  ]
+}
