@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../Styles/Reservation.css';
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Reservation() {
   const [num, setNum] = useState(4);

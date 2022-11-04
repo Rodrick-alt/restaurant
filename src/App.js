@@ -1,5 +1,5 @@
 import './Styles/App.css';
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -61,13 +61,12 @@ function App() {
           <div className='menu__content2'>
             <div className='menu-item'>
               <div className='image-container'>
-                <img className='image1' src={require('./Images/salmon-desktop-tablet.jpg')}
-                  alt='' width={'96px'} height={'72px'} loading='lazy' />
-                <img src={require('./Images/pattern-divide.svg').default} alt=''
+                <div className='image1 salmon' />
+                <img className='image2' src={require('./Images/pattern-divide.svg').default} alt=''
                   loading='lazy' width={'71px'} height={'7px'} />
               </div>
               <div className='text-container'>
-                <h3>Seared Salmin Fillet</h3>
+                <h3>Seared Salmon Fillet</h3>
                 <p>Our locally sourced salmon served with a refreshing
                   buckwheat summer salad.</p>
               </div>
@@ -75,9 +74,8 @@ function App() {
 
             <div className='menu-item'>
               <div className='image-container'>
-                <img className='image1' src={require('./Images/beef-desktop-tablet.jpg')}
-                  alt='' width={'96px'} height={'72px'} loading='lazy' />
-                <img src={require('./Images/pattern-divide.svg').default} alt=''
+                <div className='image1 beef' />
+                <img className='image2' src={require('./Images/pattern-divide.svg').default} alt=''
                   loading='lazy' width={'71px'} height={'7px'} />
               </div>
               <div className='text-container'>
@@ -89,9 +87,8 @@ function App() {
 
             <div className='menu-item'>
               <div className='image-container'>
-                <img className='image1' src={require('./Images/chocolate-desktop-tablet.jpg')}
-                  alt='' width={'96px'} height={'72px'} loading='lazy' />
-                <img src={require('./Images/pattern-divide.svg').default} alt=''
+                <div className='image1 chocolate' />
+                <img className='image2' src={require('./Images/pattern-divide.svg').default} alt=''
                   loading='lazy' width={'71px'} height={'7px'} />
               </div>
               <div className='text-container'>

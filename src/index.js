@@ -4,7 +4,7 @@ import './Styles/Index.css';
 import App from './App';
 import Reservation from './Pages/Reservation';
 import NoPage from './Pages/NoPage';
-import { BrowserRouter, Routes, Route, useLocation, HashRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 function Index() {
 
@@ -19,7 +19,7 @@ function Index() {
   }
 
   return (
-    <HashRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
       <Routes>
         <Route>
@@ -29,7 +29,7 @@ function Index() {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
