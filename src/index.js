@@ -6,8 +6,8 @@ import Reservation from './Pages/Reservation';
 import NoPage from './Pages/NoPage';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
-function Index() {
 
+function Index() {
   // Scroll to top on route change
   const ScrollToTop = (props) => {
     const { pathname } = useLocation();

@@ -50,9 +50,9 @@ function Reservation() {
           <div className='form-people'>
             <input className='button' type={'button'} value='-'
               onClick={() => setNum(old => {
-                if (old - 1 >= 0) {
+                if (old - 1 >= 1) {
                   return old - 1
-                } else { return 0 }
+                } else { return 1 }
               })} />
 
             <p> {num} people</p>
