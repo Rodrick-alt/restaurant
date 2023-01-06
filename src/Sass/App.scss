@@ -4,7 +4,6 @@
 *:after {
   box-sizing: inherit;
 }
-
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -14,25 +13,25 @@ html {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
 body,
 main,
 #root,
-#page-wrapper {
+#pageWrapper {
   height: 100%;
   font-family: 'League Spartan', sans-serif;
   color: hsl(260deg, 8%, 14%);
 }
-
-#page-wrapper {
+#pageWrapper {
   height: auto;
 }
-
 //  * {
 //   outline: 1px solid #f00 !important;
 //   opacity: 1 !important;
 //   visibility: visible !important;
 // } 
+
+
+
 
 /* No hover effects on touch ***********************************/
 @media (hover: hover) and (pointer: fine) {
@@ -43,7 +42,7 @@ main,
       transition: .2s ease-out;
     }
   }
-  .Events{
+  .events{
     button:hover{
       border: 1px solid #111111;
     }
@@ -58,6 +57,9 @@ main,
   }
 
 }
+
+
+
 
 /* BASICS ****************************************************** */
 body{
@@ -76,7 +78,7 @@ p,pre{
   font-weight: 300;
   line-height: 23px;
   letter-spacing: 1.25px;
-  color: rgba($color: #ffffff, $alpha: .8)
+  color: rgba(255, 255, 255,.8);
 }
 button{
   width: 200px;
@@ -94,7 +96,7 @@ button{
 }
 
 
-.Hero{
+.hero{
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -106,7 +108,7 @@ button{
   margin-bottom: 5rem;
   color: white;
 }
-.hero-content{
+.heroContent{
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -124,7 +126,7 @@ button{
 }
 
 
-.Highlights{
+.highlights{
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -133,7 +135,6 @@ button{
   padding: 5rem 0 0 0;
   background: white;
 }
-
 .highlight-1, .highlight-2{
   display: flex;
   flex-flow: row nowrap;
@@ -145,28 +146,26 @@ button{
   background-size: 60% 250px;
   background-position: 0% 15%;
   padding: 0 10rem;
-  .image{
+  .highlight-img{
     position: relative;
     top: -10rem;
     box-shadow: 0 7.5rem 10rem -5rem rgb(56 66 85 / 50%);
   }
 }
-
 .highlight-2{
   align-items: center;
   background: url('../Images/pattern-curve-top-left.svg') no-repeat;
   background-size: 70% 250px;
   background-position: 100% 85%;
   margin-bottom: -2.2rem;
-  .image{
+  .highlight-img{
     z-index: 2;
     position: relative;
     top: 2rem;
     box-shadow: 0 7.5rem 10rem -5rem rgb(56 66 85 / 50%);
   }
 }
-
-.highlight-1__content, .highlight-2__content{
+.highlight-content{
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -189,7 +188,8 @@ button{
   }
 }
 
-.Menu{
+
+.menu{
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -198,7 +198,7 @@ button{
   padding: 10rem 10rem 5rem 10rem;
   background: #111111;
 }
-.menu__content1{
+.menuContent-1{
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -218,8 +218,7 @@ button{
     font-weight: 400;
   }
 }
-
-.menu__content2, .menu-item{
+.menuContent-2, .menu-item{
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -232,37 +231,34 @@ button{
   gap: 1.5rem;
   width: 100%;
   max-width: 500px;
-  .image-container{
-    .image1{
-      width: 96px;
-      height: 72px;
-      position: relative;
-      z-index: 2;
-      background: lightblue;
-    }
-    .image2{
-      position: relative;
-      z-index: 1;
-      bottom: 4.5rem;
-      left: 2.5rem;
-    }
-    .salmon{
-      background: url('../Images/salmon-desktop-tablet.jpg') no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-    .beef{
-      background: url('../Images/beef-desktop-tablet.jpg') no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-    .chocolate{
-      background: url('../Images/chocolate-desktop-tablet.jpg') no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
+  .image1{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
   }
-  .text-container{
+  .image2{
+    position: relative;
+    bottom: 6rem;
+    left: 3rem;
+    z-index: 1;
+  }
+  .salmon{
+    background: url('../Images/salmon-desktop-tablet.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .beef{
+    background: url('../Images/beef-desktop-tablet.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .chocolate{
+    background: url('../Images/chocolate-desktop-tablet.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .textContainer{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -276,7 +272,8 @@ button{
   }
 }
 
-.Events{
+
+.events{
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -288,7 +285,7 @@ button{
   background-size: 33% 250px;
   background-position: 0% 0;
   background-color: white;
-  .image-container{
+  .imgContainer{
     max-width: 420px;
     .image1{
       position: relative;
@@ -311,7 +308,7 @@ button{
     }
   }
 }
-.events__content{
+.eventsContent{
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -340,6 +337,8 @@ button{
       }
     }
 }
+
+
 .CTA{
   display: flex;
   flex-flow: row nowrap;
@@ -365,6 +364,7 @@ button{
   }
 }
 
+
 footer{
   display: flex;
   flex-flow: row nowrap;
@@ -382,39 +382,6 @@ footer{
     cursor: pointer;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -440,13 +407,14 @@ footer{
     max-width: 320px;
   }
 
-  .Hero{
+
+  .hero{
     justify-content: flex-end;
     align-items: center;
     gap: 5rem 1rem;
-    padding: 5rem 2rem;
+    padding: 0 2rem 5rem 2rem;
   }
-  .hero-content{
+  .heroContent{
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
@@ -459,7 +427,8 @@ footer{
     }
   }
 
-  .Highlights{
+
+  .highlights{
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
@@ -474,7 +443,7 @@ footer{
     width: 100%;
     background-image: none;
     padding: 0 2rem;
-    .image{
+    .highlight-img{
       position: relative;
       top: -2rem;
     }
@@ -485,12 +454,11 @@ footer{
     align-items: center;
     background-image: none;
     margin-bottom: 0;
-    .image{
+    .highlight-img{
       position: static;
     }
   }
-  .highlight-1__content, 
-  .highlight-2__content{
+  .highlight-content {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -500,16 +468,16 @@ footer{
       line-height: 35px;
     }
   }
-  
 
-  .Menu{
+
+  .menu{
     flex-flow: row wrap;
     justify-content: center;
     gap: 5rem 2rem;
     padding: 5rem 0 5rem 0;
     background: #111111;
   }
-  .menu__content1{
+  .menuContent-1{
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -520,8 +488,7 @@ footer{
       line-height: 35px;
     }
   }
-  
-  .menu__content2, .menu-item{
+  .menuContent-2, .menu-item{
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: flex-start;
@@ -533,7 +500,7 @@ footer{
     align-items: center;
     text-align: center;
     width: 100%;
-    .image-container{
+    .imgContainer{
       width: 100%;
       .image1{
         width:100%;
@@ -559,7 +526,7 @@ footer{
         background-size: cover;
       }
     }
-    .text-container{
+    .textContainer{
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -572,7 +539,7 @@ footer{
   }
 
 
-  .Events{
+  .events{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
@@ -581,7 +548,7 @@ footer{
     padding: 4rem 0;
     background: white;
     background-image: none;
-    .image-container{
+    .imgContainer{
       max-width: 100%;
       .image1, .image3{
         display: none;
@@ -593,7 +560,7 @@ footer{
       }
     }
   }
-  .events__content{
+  .eventsContent{
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -619,6 +586,7 @@ footer{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    align-content: center;
     text-align: center;
     gap: 2rem 2rem;
     padding: 5rem 2rem;
@@ -650,27 +618,6 @@ footer{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 912px) {
   body{
@@ -689,13 +636,14 @@ footer{
     max-width: 320px;
   }
 
-  .Hero{
+
+  .hero{
     justify-content: flex-end;
     align-items: center;
     gap: 5rem 1rem;
     padding: 5rem 2rem;
   }
-  .hero-content{
+  .heroContent{
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
@@ -708,13 +656,14 @@ footer{
     }
   }
 
+
   main{
     width: 100%;
     background: transparent;
   }
-  
 
-  .Highlights{
+
+  .highlights{
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
@@ -730,7 +679,7 @@ footer{
     width: 100%;
     background-image: none;
     padding: 0 2rem;
-    .image{
+    .highlight-img{
       position: relative;
       top: -2rem;
     }
@@ -741,12 +690,11 @@ footer{
     align-items: center;
     background-image: none;
     margin-bottom: 0;
-    .image{
+    .highlight-img{
       position: static;
     }
   }
-  .highlight-1__content, 
-  .highlight-2__content{
+  .highlight-content {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -756,16 +704,16 @@ footer{
       line-height: 35px;
     }
   }
-  
 
-  .Menu{
+
+  .menu{
     flex-flow: row nowrap;
     justify-content: space-between;
     gap: 3rem;
     padding: 5rem 4rem;
     background: #111111;
   }
-  .menu__content1{
+  .menuContent-1{
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -777,8 +725,7 @@ footer{
       line-height: 30px;
     }
   }
-  
-  .menu__content2, .menu-item{
+  .menuContent-2, .menu-item{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -791,20 +738,19 @@ footer{
     gap: 1.5rem;
     width: 100%;
     max-width: 500px;
-    .image-container{
+    .imgContainer{
       .image1{
-        width: 80%;
         position: relative;
         z-index: 2;
       }
       .image2{
         position: relative;
         z-index: 1;
-        bottom: 4.8rem;
+        bottom: 6rem;
         left: 3rem;
       }
     }
-    .text-container{
+    .textContainer{
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
@@ -818,7 +764,8 @@ footer{
     }
   }
 
-  .Events{
+
+  .events{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
@@ -827,7 +774,7 @@ footer{
     padding: 4rem 0;
     background: white;
     background-image: none;
-    .image-container{
+    .imgContainer{
       max-width: 100%;
       .image1, .image3{
         display: none;
@@ -839,7 +786,7 @@ footer{
       }
     }
   }
-  .events__content{
+  .eventsContent{
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -877,7 +824,8 @@ footer{
       line-height: 35px;
     }
   }
-  
+
+
   footer{
     flex-flow: row nowrap;
     justify-content: center;
@@ -886,13 +834,7 @@ footer{
     width: 100%;
     padding: 2rem 2rem;
   }
-
 }
-
-
-
-
-
 
 
 
@@ -903,14 +845,14 @@ footer{
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 912px) {
-  .Hero{
+  .hero{
     justify-content: flex-end;
     align-items: center;
     gap: 3rem;
     height: 880px;
     padding: 5rem 2rem;
   }
-  .hero-content{
+  .heroContent{
     max-width: 100%;
     h2{
       font-size: 2.5rem;
@@ -924,11 +866,11 @@ footer{
   }
 
 
-  .Highlights{
+  .highlights{
     gap: 7rem;
   }
   .highlight-1, .highlight-2{
-    .image{
+    .highlight-img{
       max-width: 100%;
       width: 100%;
       height: 350px;
@@ -949,7 +891,8 @@ footer{
     }
   }
 
-  .Menu{
+
+  .menu{
     flex-flow: column;
     justify-content: center;
     align-items: center;
@@ -957,15 +900,16 @@ footer{
     h2,p{
       max-width: 500px;
     }
-    .menu__content2{
-      .image1{
+    .menuContent-2{
+      .highlight-img1{
         width: 100px;
       }
     }
   }
 
-  .Events{
-    .events__content{
+
+  .events{
+    .eventsContent{
       gap: 2rem;
     }
     h2,p{
@@ -983,11 +927,16 @@ footer{
     }
   }
 
-  .Menu, .Events, .CTA{
+
+  .menu, .events, .CTA{
     padding-left: 2rem;
     padding-right: 2rem
   }
 }
+
+
+
+
 
 
 
@@ -1003,12 +952,14 @@ footer{
     background-attachment: fixed;
 }
 
-  .Hero{
+
+  .hero{
     padding: 5rem 4rem;
     margin-bottom: 10rem;
   }
 
-  .Highlights{
+
+  .highlights{
     padding-left: 4rem;
     padding-right: 4rem;
   }
@@ -1017,21 +968,19 @@ footer{
     padding: 0;
   }
 
-  .Menu{
+
+  .menu{
     padding-top: 15rem;
   }
 
-  .Menu, .Events, .CTA, footer{
+
+  .menu, .events, .CTA, footer{
     padding-left: 4rem;
     padding-right: 4rem
   }
 }
 
-
-
-
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {}
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}

@@ -1,18 +1,45 @@
 import { useState } from 'react';
 import '../Styles/Reservation.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom';
 
 function Reservation() {
-  const [num, setNum] = useState(4);
+  const navigate = useNavigate();
+  const [num, setNum] = useState([4, 'People']);
+  const [activeStyle, setActiveStyle] = useState('reserveActive--off');
+  const htmlElement = document.getElementsByTagName('html')[0];
+
+  function ReservationActive(props) {
+    const [style, setStyle] = useState(props.compStyle);
+    return (
+      <div className={style} onClick={((event) => {
+        event.stopPropagation();
+        setStyle(old => 'reserveActive--off');
+        htmlElement.style.overflow = 'auto';
+        navigate('/');
+      })}>
+        <div className='card'>
+          <button onClick={(() => {
+            setStyle(old => 'reserveActive--off');
+            htmlElement.style.overflow = 'auto';
+            navigate('/');
+          })}>
+            X
+          </button>
+          <h2>Thank you for booking!</h2>
+        </div>
+      </div>
+    )
+  }
 
   return (
-    <div id='page-wrapper'>
-      <header className='Hero Hero2'>
+    <div id='pageWrapper'>
+      <ReservationActive compStyle={activeStyle} />
+      <header className='hero hero2'>
         <Link to='/'>
           <img src={require('../Images/logo.svg').default}
             alt='logo' width={'103px'} height={'40px'} />
         </Link>
-        <div className='hero-content hero-content2'>
+        <div className='hero-content hero2-content'>
           <h1>Reservations</h1>
           <p>We can’t wait to host you. If you have any special requirements
             please feel free to call on the phone number below.
@@ -20,9 +47,9 @@ function Reservation() {
         </div>
       </header>
 
-      <main className='main2'>
 
-        <form>
+      <main className='main2'>
+        <form id='reservationForm'>
           <input className='form-name' name='name' type='text' placeholder='Name' required />
           <input className='form-email' name='email' type='email' placeholder='Email' required />
 
@@ -50,34 +77,43 @@ function Reservation() {
           <div className='form-people'>
             <input className='button' type={'button'} value='-'
               onClick={() => setNum(old => {
-                if (old - 1 >= 1) {
-                  return old - 1
-                } else { return 1 }
+                if (old[0] - 1 > 1) {
+                  return [old[0] - 1, 'People']
+                } else { return [1, 'Person'] }
               })} />
 
-            <p> {num} people</p>
+            <p> {num[0] + " " + num[1]}</p>
 
             <input className='button' value='+' type={'button'}
               onClick={() => setNum(old => {
-                if (old + 1 <= 10) {
-                  return old + 1
-                } else { return 10 }
+                if (old[0] + 1 <= 10) {
+                  return [old[0] + 1, "People"]
+                } else { return [10, "People"] }
               })} />
           </div>
 
           <button type='submit' onClick={(e) => {
-            e.preventDefault();
-            const formData = new FormData(document.querySelector('form'));
-            const entires = formData.entries();
-            for (var input of entires) {
-              console.log(input[0] + ': ' + input[1]);
+            if (document.getElementById('reservationForm').checkValidity()) {
+              e.preventDefault();
+              const formData = new FormData(document.querySelector('form'));
+              const entires = formData.entries();
+              for (var input of entires) {
+                console.log(input[0] + ': ' + input[1]);
+              }
+
+              setActiveStyle(old => 'reserveActive--on');
+              htmlElement.style.overflowY = 'hidden';
             }
-          }}>MAKE RESERVATION</button>
+          }}>
+            MAKE RESERVATION
+          </button>
         </form>
+
         <img className='form-image'
           src={require('../Images/pattern-lines.svg').default} alt=''
           loading='lazy' width={'160px'} height={'76px'} />
       </main>
+
 
       <footer>
         <Link to='/'>

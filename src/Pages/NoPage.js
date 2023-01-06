@@ -3,7 +3,7 @@ import '../Styles/NoPage.css';
 
 function NoPage() {
   return (
-    <div className='Page'>
+    <div className='page'>
       {/* 404 PAGE NOT FOUND */}
     </div>
   )

@@ -5,7 +5,6 @@
       border-radius: 5px;
       border: 2px solid #111111;
     }
-
       button:hover{
         color: #111111;
         background-color: white;
@@ -14,7 +13,52 @@
   }
 }
 
-.Hero2{
+.reserveActive--off{
+  display: none;
+}
+.reserveActive--on{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background: rgba(0, 0, 0,.4);
+  padding: 2rem;
+  .card{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    color: #242b37;
+    max-width: 400px;
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  h2{
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  button{
+    font-weight: 700;
+    font-size: 2rem;
+    color: #9e7f66;
+    width: 100px;
+    background: transparent;
+  }
+}
+
+
+.hero2{
   background-color:#111111;
   background-image: url('../Images/hero2-bg-desktop.jpg');
   background-repeat: no-repeat;
@@ -22,7 +66,7 @@
   background-size: cover;
   background-attachment: fixed;
 }
-.Hero2{
+.hero2{
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -31,9 +75,9 @@
   height: 100%;
   padding: 4rem 5rem 8rem 5rem;
   margin-bottom: 0;
-  .hero-content2{
-    width: 100%;
+  .hero2-content{
     max-width: 450px;
+    width: 100%;
     h1{
       font-size: 65px;
       font-weight: 400;
@@ -155,21 +199,29 @@ form{
 
 
 
+
+
+
 /* MEDIA QUERIES ****************************************************** */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .Hero2{
+  h1, h2, h3, p, pre, span {
+    max-width: 500px;
+  }
+
+
+  .hero2{
     background-image: url('../Images/hero2-bg-mobile.jpg');
     background-size: cover;
     background-attachment: local;
   }
-  .Hero2{
+  .hero2{
     justify-content: center;
     align-items: center;
     text-align: center;
     gap: 5rem;
     padding: 5rem 2rem;
-    .hero-content2{
+    .hero2-content{
       width: 100%;
       max-width: 450px;
       h1{
@@ -186,6 +238,7 @@ form{
     }
   }
 
+
   .main2{
     justify-content: flex-start;
     align-items: center;
@@ -193,6 +246,7 @@ form{
     width: 100%;
     height: auto;
   }
+
 
   form{
     position: static;
@@ -226,6 +280,7 @@ form{
     }
   }
 
+
   footer{
     margin: 0 auto;
     flex-flow: row wrap;
@@ -240,21 +295,27 @@ form{
 }
 
 
+
+
+
+
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 912px) {
-  .Hero2{
+  .hero2{
     background-image: url('../Images/hero2-bg-tablet.jpg');
     background-size: cover;
     background-attachment: local;
   }
-  .Hero2{
+  .hero2{
     justify-content: center;
     align-items: flex-start;
     text-align: center;
     gap: 10rem;
     width: 100%;
     padding: 5rem 4rem 15rem 4rem;
-    .hero-content2{
+    .hero2-content{
       justify-self: center;
       align-self: center;
       width: 100%;
@@ -262,6 +323,8 @@ form{
       h1{
         font-weight: 400;
         letter-spacing: .35px;
+        max-width: initial;
+        width: auto;
       }
       p{
         max-width: 500px;
@@ -273,6 +336,7 @@ form{
     }
   }
 
+
   .main2{
     justify-content: flex-start;
     align-items: center;
@@ -280,6 +344,7 @@ form{
     padding:0 5rem;
     height: 37rem;
   }
+
 
   form{
     position: relative;
@@ -319,6 +384,7 @@ form{
     }
   }
 
+
   footer{
     flex-flow: row nowrap;
     justify-content: center;
@@ -327,8 +393,12 @@ form{
     width: 100%;
     padding: 5rem 5rem;
   }
-
 }
+
+
+
+
+
 
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -341,7 +411,7 @@ form{
     padding-right: 2rem !important;
   }
 
-  .hero-content2 {
+  .hero2-content {
     max-width: 350px !important;
 }
 
@@ -352,5 +422,4 @@ form{
   .form-image{
     left: -25rem;
   }
-
 }
