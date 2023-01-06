@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/restaurant/static/css/main.450d7cfb.css",
-    "main.js": "/restaurant/static/js/main.0447ad43.js",
+    "main.css": "/restaurant/static/css/main.30a11122.css",
+    "main.js": "/restaurant/static/js/main.f93c96fa.js",
     "static/media/hero-bg-desktop@2x.jpg": "/restaurant/static/media/hero-bg-desktop@2x.eb3018c2e6e91c6ac813.jpg",
     "static/media/hero-bg-tablet@2x.jpg": "/restaurant/static/media/hero-bg-tablet@2x.a41d079d0ca6c324b551.jpg",
     "static/media/hero2-bg-desktop.jpg": "/restaurant/static/media/hero2-bg-desktop.380ae5ab864278655745.jpg",
@@ -23,11 +23,11 @@
     "static/media/pattern-divide.svg": "/restaurant/static/media/pattern-divide.bf6d0c5c9c8bc89b8c415e6b51851fe2.svg",
     "static/media/pattern-curve-top-right.svg": "/restaurant/static/media/pattern-curve-top-right.df37c69de72cbd2d4ef2.svg",
     "static/media/pattern-curve-top-left.svg": "/restaurant/static/media/pattern-curve-top-left.77f903fbea346f903136.svg",
-    "main.450d7cfb.css.map": "/restaurant/static/css/main.450d7cfb.css.map",
-    "main.0447ad43.js.map": "/restaurant/static/js/main.0447ad43.js.map"
+    "main.30a11122.css.map": "/restaurant/static/css/main.30a11122.css.map",
+    "main.f93c96fa.js.map": "/restaurant/static/js/main.f93c96fa.js.map"
   },
   "entrypoints": [
-    "static/css/main.450d7cfb.css",
-    "static/js/main.0447ad43.js"
+    "static/css/main.30a11122.css",
+    "static/js/main.f93c96fa.js"
   ]
 }
